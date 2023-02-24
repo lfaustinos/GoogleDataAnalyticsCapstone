@@ -47,8 +47,9 @@ cyclisticdfe$time <- format(as.Date(cyclisticdfe$date), "%H:%M:%S") #format time
 cyclisticdfe$time <- as_hms((cyclisticdfe$started_at)) #create new column for time
 cyclisticdfe$hour <- hour(cyclisticdfe$time) #create new column for hour
 
+#Calculations to obtain the distance using GPS data in meters
 cyclisticdfe$ride_length <- difftime(dfcyclistic$ended_at, dfcyclistic$started_at, units = "mins")
-cyclisticdfe$dlat <- (abs(cyclisticdfe$end_lat - cyclisticdfe$start_lat))*pi/180 #create new column for hour
+cyclisticdfe$dlat <- (abs(cyclisticdfe$end_lat - cyclisticdfe$start_lat))*pi/180 
 cyclisticdfe$dlng <- (abs(cyclisticdfe$end_lng - cyclisticdfe$start_lng))*pi/180
 cyclisticdfe$da <- (sin(cyclisticdfe$dlat/2))^2+cos(cyclisticdfe$start_lat*pi/180)*cos(cyclisticdfe$end_lat*pi/180)*(sin(cyclisticdfe$dlng/2))^2
 cyclisticdfe$distance <- 6371000*2*atan(sqrt(cyclisticdfe$da)/sqrt(1-cyclisticdfe$da))
