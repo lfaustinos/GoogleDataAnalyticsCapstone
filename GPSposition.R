@@ -71,23 +71,23 @@ sum(GPSdf$start_lat == 41.89 & GPSdf$start_lng == -87.64)
 which(cyclisticdfe$start_lat == 41.89 & cyclisticdfe$start_lng == -87.63)#2419 Al parecer esta estación no tiene nombre
 which(cyclisticdfe$start_lat == 41.89 & cyclisticdfe$start_lng == -87.64)#824879 Al parecer esta estacion tampoco tiene nombre
 
-cyclisticdfe_mistery <- subset(cyclisticdfe, start_lat == 41.89 & start_lng == -87.63)#No es vacía
-cyclisticdfe_mistery <- na.omit(cyclisticdfe_mistery)#Quedó vacía
-cyclisticdfe_mistery <- subset(cyclisticdfe, start_lat == 41.89 & start_lng == -87.64)#No es vacía
-cyclisticdfe_mistery <- na.omit(cyclisticdfe_mistery)#Quedó vacía
+cyclisticdfe_mystery <- subset(cyclisticdfe, start_lat == 41.89 & start_lng == -87.63)#No es vacía
+cyclisticdfe_mystery <- na.omit(cyclisticdfe_mystery)#Quedó vacía
+cyclisticdfe_mystery <- subset(cyclisticdfe, start_lat == 41.89 & start_lng == -87.64)#No es vacía
+cyclisticdfe_mystery <- na.omit(cyclisticdfe_mystery)#Quedó vacía
 #Las estaciones que podrian ser el centro de acumulación de la tercera parte de los datos no tiene nombre
-cyclisticdfe_mistery <- subset(cyclisticdfe, start_lat == 41.89 & start_lng == -87.65)
-cyclisticdfe_mistery <- na.omit(cyclisticdfe_mistery)#N Green St & W Lake St
-view(cyclisticdfe_mistery)#N Green St & W Lake St
+cyclisticdfe_mystery <- subset(cyclisticdfe, start_lat == 41.89 & start_lng == -87.65)
+cyclisticdfe_mystery <- na.omit(cyclisticdfe_mystery)#N Green St & W Lake St
+view(cyclisticdfe_mystery)#N Green St & W Lake St
 
-cyclisticdfe_mistery <- subset(cyclisticdfe, start_lat == 41.89 & start_lng == -87.62)#No es vacía
-cyclisticdfe_mistery <- na.omit(cyclisticdfe_mistery)#Quedó vacía
+cyclisticdfe_mystery <- subset(cyclisticdfe, start_lat == 41.89 & start_lng == -87.62)#No es vacía
+cyclisticdfe_mystery <- na.omit(cyclisticdfe_mystery)#Quedó vacía
 
-cyclisticdfe_mistery <- subset(cyclisticdfe, start_lat == 41.88 & start_lng == -87.63)#No es vacía
-cyclisticdfe_mistery <- na.omit(cyclisticdfe_mistery)#Quedó vacía
+cyclisticdfe_mystery <- subset(cyclisticdfe, start_lat == 41.88 & start_lng == -87.63)#No es vacía
+cyclisticdfe_mystery <- na.omit(cyclisticdfe_mystery)#Quedó vacía
 
-cyclisticdfe_mistery <- subset(cyclisticdfe, start_lat == 41.90 & start_lng == -87.63)#No es vacía
-cyclisticdfe_mistery <- na.omit(cyclisticdfe_mistery)#N Clark St & W Elm St
+cyclisticdfe_mystery <- subset(cyclisticdfe, start_lat == 41.90 & start_lng == -87.63)#No es vacía
+cyclisticdfe_mystery <- na.omit(cyclisticdfe_mystery)#N Clark St & W Elm St
 view(cyclisticdfe_mistery)#N Clark St & W Elm St
 #La conclusion es que no podemos confiar en que la acumulación de los viajes sea real, se debe preguntar a la empresa sobre la ubicación de sus estaciones para seguir anaizando los datos.
 
